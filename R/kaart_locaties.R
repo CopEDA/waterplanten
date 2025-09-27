@@ -15,6 +15,6 @@ locs %>%
   sf::st_transform(crs = 4326) %>% 
   leaflet() %>% 
   addTiles() %>% 
-  addCircleMarkers(label = ~paste(Location_Name, Landscape_NL), stroke = FALSE, fillOpacity = 0.9)
+  addCircleMarkers(label = ~paste(Location_Orig, Location_Name, Landscape_NL), stroke = FALSE, fillOpacity = 0.9)
 
 odbc::dbDisconnect(con)

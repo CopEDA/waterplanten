@@ -20,6 +20,7 @@ tabelnaam2 <- stringr::str_remove(tabelnaam, ":")
 
 tabel %>% 
   collect() %>% 
+  rename_all(stringr::str_to_lower) %>% 
   write_parquet(paste0("data-raw/parquet/",tabelnaam2, ".parquet"))
 
 

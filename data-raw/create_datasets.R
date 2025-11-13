@@ -21,6 +21,10 @@ for (tabelnaam in tabellen){
   
 }
 
+# physicochemical_data <- physicochemical_data |> as.data.frame() |> tibble::as_tibble()
+
+
+
 usethis::use_data(compartments,
                   datasets,
                   landscape_data,

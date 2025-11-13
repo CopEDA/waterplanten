@@ -13,7 +13,7 @@ for (tabelnaam in tabellen){
   
   
   print(tabel_objectnaam)
-  tabel <- arrow::read_parquet(tabelnaam) |> dplyr::collect() |> tibble::as_tibble()
+  tabel <- arrow::read_parquet(tabelnaam) |> dplyr::collect() |> tibble::as_tibble() |> force()
   
   assign(tabel_objectnaam, tabel, envir = .GlobalEnv)
   
